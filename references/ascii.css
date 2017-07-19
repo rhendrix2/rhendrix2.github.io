@@ -1,0 +1,41 @@
+body, html
+{
+	background-color: #002236;
+	color: #ffffff;
+	text-align: center;
+
+	height: 100%;
+}
+table
+{
+	background-color: #010101;
+	border-collapse: collapse;
+	
+	margin: auto;
+}
+th
+{
+	color: #ffffff;
+	border-bottom: solid;
+	border-color: #ffffff;
+}
+td:nth-child(1), th:nth-child(1)
+{
+	color: #ffffff;
+	border-right: solid;
+	border-color: #ffffff;
+}
+td
+{
+	text-align: center;
+	font-family: monospace;
+	font-size: 14pt;
+	color: #42B7FB;
+
+	padding: 5px 10px 5px 10px;
+}
+td:hover:not(:first-child)
+{
+	background-color: #002236;
+	color: #ffffff;
+}

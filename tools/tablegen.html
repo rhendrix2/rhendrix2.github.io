@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table Generator</title>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="tablegen.css">
+	<script src="tablegen.js"></script>
+</head>
+<body>
+	<div id="settings">
+		<p>Delimiters:</p>
+		<div id="delimiters">
+			<label>
+				Columns:
+				<select id="colD">
+					<option value=",">Comma</option>
+					<option value=" ">Space</option>
+					<option value="&#9;">Tab</option>
+					<option value="&#10;">Newline</option>
+				</select>
+			</label>
+			<br>
+			<label>
+				Rows:
+				<select id="rowD">
+					<option value="&#10;">Newline</option>
+					<option value="&#10;&#10;">Double Newline</option>
+					<option value=";">Semicolon</option>
+				</select>
+			</label>
+		</div>
+		<label>
+			To: 
+			<select id="to">
+				<option value="csv">CSV</option>
+				<option value="html">HTML</option>
+				<option value="latex">LaTeX</option>
+			</select>
+		</label>
+		<br>
+		<button onclick="convert();">Convert</button>
+		<br>
+		<input type="file" id="upload"></input>
+	</div>
+	<div id="table">
+		<textarea id=editor></textarea>
+	</div>
+	<script>
+		document.getElementById("upload").addEventListener("change", handleFileSelect, false);
+	</script>
+</body>
+</html>

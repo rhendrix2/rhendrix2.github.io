@@ -1,0 +1,48 @@
+body, html
+{
+	background-color: #002236;
+	color: #42B7FB;
+
+	height: 100%;
+	overflow: hidden;
+
+	padding: 0px;
+	margin: 0px;
+}
+#edDiv
+{
+	float: left;
+	width: 50%;
+	height: 100%;
+}
+#display
+{
+	float: right;
+	width: 50%;
+	height: 100%;
+
+	font-family: serif;
+	font-size: 12pt;
+
+	color: #ffffff;
+	
+	overflow-y: auto;
+}
+textarea
+{
+	margin: 0px;
+	padding-left: 10px;
+
+	width: 95%;
+	height: 100vh;
+
+	border: none;
+
+	background-color: #010101;
+	color: #42B7FB;
+
+	font-family: monospace;
+	font-size: 12pt;
+
+	resize: none;
+}
