@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vim Regex Reference</title>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="mdStyle.css">
+</head>
+<body>
+<div id="content">
+<h1 id="vim-regex-reference">Vim Regex Reference</h1>
+<h2 id="commands">Commands</h2>
+<p><code>/</code> is while in normal mode will allow you to search for an expression.</p>
+<p><code>s</code> in command mode will allow you to replace expressions. This section applies mainly to the <code>s</code> command. </p>
+<p>The format for the s command is:</p>
+<pre><code>:[range]s/[find]/[replace]/[options]
+</code></pre><h2 id="ranges">Ranges</h2>
+<p>Whole document:</p>
+<pre><code>:%s/.../.../g
+</code></pre><p>Specific line range:</p>
+<pre><code>:23,46s/.../.../g
+</code></pre><p>Current line to end:</p>
+<pre><code>:.,$s/.../.../g
+</code></pre><p><code>g</code> stands for global and means that all occurances in the range will be found. Leaving the <code>g</code> out will replace only the first occurance on each line.</p>
+<h2 id="grouping">Grouping</h2>
+<p>Groups can be capture with <code>\(...\)</code> and later referenced as <code>\#</code> where <code>#</code> is the number of the group. </p>
+<p><code>\0</code> is the whole pattern.</p>
+<h3 id="examples-">Examples:</h3>
+<p>Replace <code>foo</code> with <code>foobar</code>:</p>
+<pre><code>.../foo/\0bar/g
+</code></pre><p>Replace <code>foobar</code> with <code>foofoo</code>:</p>
+<pre><code>.../\(foo\)bar/\1foo/g
+</code></pre><h2 id="special-characters">Special Characters</h2>
+<h3 id="unescaped">Unescaped</h3>
+<p>These characters have a special meaning and must be escaped to use them literally. </p>
+<table>
+<thead>
+<tr>
+<th>Character</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\</td>
+<td>Used to escape other characters</td>
+</tr>
+<tr>
+<td>[]</td>
+<td>Used to define a character class</td>
+</tr>
+<tr>
+<td>^</td>
+<td>Line start or class negation</td>
+</tr>
+<tr>
+<td>$</td>
+<td>Line end</td>
+</tr>
+<tr>
+<td>.</td>
+<td>Matches and character</td>
+</tr>
+<tr>
+<td>*</td>
+<td>Matches 0 or more of what precedes it</td>
+</tr>
+</tbody>
+</table>
+<h3 id="escaped">Escaped</h3>
+<p>These characters have a special meaning, but have to be escaped to use it.</p>
+<table>
+<thead>
+<tr>
+<th>Character</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+</td>
+<td>Matches 1 or more of what precedes it</td>
+</tr>
+<tr>
+<td>?</td>
+<td>Matches 0 or one of what preceds it</td>
+</tr>
+<tr>
+<td>n</td>
+<td>Newline (only use when searching)</td>
+</tr>
+<tr>
+<td>r</td>
+<td>Carriage return (use when replacing)</td>
+</tr>
+<tr>
+<td>s</td>
+<td>whitespace character</td>
+</tr>
+<tr>
+<td>S</td>
+<td>non-whitespace character</td>
+</tr>
+<tr>
+<td>w</td>
+<td>"word" character (letters and numbers)</td>
+</tr>
+<tr>
+<td>W</td>
+<td>non-word character</td>
+</tr>
+<tr>
+<td>d</td>
+<td>digit</td>
+</tr>
+<tr>
+<td>D</td>
+<td>non-digit</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

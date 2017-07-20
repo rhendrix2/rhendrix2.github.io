@@ -1,0 +1,49 @@
+body, html
+{
+	background-color: #002236;
+	color: #ffffff;
+
+	height: 100%;
+}
+h1, h2, h3
+{
+	color: #ffffff;
+}
+h3 a:link, h3 a:hover, h3 a:visited
+{
+	text-decoration: none;
+	color: #ffffff;
+}
+input
+{
+	border: none;
+
+	margin-bottom: 15px;
+	margin-left: 10px;
+
+	background-color: #010101;
+	color: #42B7FB;
+
+	font-family: monospace;
+	font-size: 12pt;
+
+	resize: none;
+}
+button
+{
+	margin-left: 10px;
+	margin-bottom: 10px;
+	padding: 3px 10px 3px 10px;
+	font-size: 12pt;
+
+	border: solid;
+	border-width: 2px;
+	border-color: #42B7FB;
+
+	background-color: #010101;
+	color: #42B7FB;
+}
+label
+{
+	margin-left: 10px;
+}

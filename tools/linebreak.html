@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Line Break Remover</title>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="../style.css">
+	<link rel="stylesheet" type="text/css" href="linebreak.css">
+	<script src="linebreak.js"></script>
+</head>
+<body>
+	<div id="settings">
+		<button onclick="remove();">Remove Breaks</button>
+		<hr>
+		<input type="file" id="upload"></input>
+		<hr>
+		<label>Filename: <input type="text" id="filename"></input></label>
+		<br>
+		<button onclick="save();">Save</button>
+	</div>
+	<div id="table">
+		<textarea id=editor></textarea>
+	</div>
+	<script>
+		document.getElementById("upload").addEventListener("change", handleFileSelect, false);
+	</script>
+</body>
+</html>
