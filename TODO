@@ -1,3 +1,7 @@
 Consolidate CSS
 
 Add html save feature to markdown editor
+
+Remove images from tools, those were pointless and take up a bunch of space.
+
+Add some of my scripts and tools that could be usefull. Also convert them to be platform independant and prefurably executable. 
